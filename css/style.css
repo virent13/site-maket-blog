@@ -1,0 +1,281 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	min-width:  320px;
+	overflow-x: hidden;
+}
+
+ul, ol {
+	list-style:  none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	max-width: 100%;
+	height:  auto;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+}
+
+/*HEADER*/
+
+header {
+	min-height: 300px;
+
+}
+.fon {
+	background-color: #5D6ADB;
+
+}
+.logo {
+	margin-top: 50px;
+}
+.soc-icons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+.soc-icons a {
+	width: 70px;
+	height: 50px;
+	background-color: #AB4747;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .5s ease;
+}
+.soc-icons a:hover {
+	transform: translateY(20px);
+}
+
+
+ul.menu-header {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 100px;
+}
+ul.menu-header li {
+	width: 180px;
+	height: 60px;
+	background-color: #AB4747;
+	text-align: center;
+	line-height: 60px;
+}
+ul.menu-header li a {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+ul.menu-header li a:hover {
+	text-decoration: underline;
+}
+ul.menu-header li.active {
+	background-color: green;
+}
+/*CONTENT*/
+main {
+	margin-top: 50px;
+}
+
+h2.article-title {
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+article p {
+	font-size: 14px;
+}
+
+article + article {
+	margin-top: 50px;
+}
+
+article {
+	border-bottom: 2px dashed #dadada;
+	padding-bottom: 10px;
+}
+
+article:last-child {
+	border-bottom: none;
+}
+a.readmore {
+	text-decoration: none;
+	width: 180px;
+	height: 50px;
+	background-color: #AB4747;
+	color:  #fff;
+	text-align: center;
+	line-height: 50px;
+	font-size: 18px;
+	font-weight: 500;
+}
+/*SIDEBAR*/
+aside {
+	background-color: #d9d9d9;
+	padding-top: 50px;
+}
+
+.widget {
+	height: 300px;
+	background-color: #5D6ADB;
+	padding-top: 20px;
+}
+
+.widget + .widget {
+	margin-top: 50px;
+}
+
+h2.widget-title {
+	margin-top: 40px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+ul.widget-list {
+	text-align: center;
+}
+
+ul.widget-list li {
+	position: relative;
+}
+ul.widget-list li + ul.widget-list li {
+	margin-top: 10px;
+}
+ul.widget-list li:before {
+	content: '\f058';
+	font-family: 'Font Awesome 5 Free';
+	position: absolute;
+	top: 0;
+	left: 36%;
+	color: #fff;
+}
+
+ul.widget-list li a {
+	color: #fff;
+	font-size: 18px;
+	font-weight: 700;
+}
+ul.widget-list li a:hover {
+	text-decoration: underline;
+}
+/*FOOTER*/
+.fonfooter {
+	background-color: #000;
+	min-height: 300px;
+}
+
+ul.menu-footer {
+	margin-top: 50px;
+}
+
+ul.menu-footer li {
+	position: relative;
+	margin-top: 10px;
+}
+ul.menu-footer li:before {
+	content: '';
+	width: 15px;
+	height: 15px;
+	background-image: url('../images/bookmark.svg');
+	position: absolute;
+	top: 5px;
+	left: -20px;
+	color: #fff;
+}
+ul.menu-footer li a {
+	color: #fff;
+}
+ul.menu-footer li a:hover {
+	text-decoration: underline;
+}
+p.copy {
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+}
+/*BUTTON UP*/
+.up {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #AB4747;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	text-align: center;
+	line-height: 50px;
+	transition: all .5s ease;
+}
+.up i {
+	color: #fff;
+}
+.up:hover {
+	opacity: .5;
+}
+/*MEDIA QUERRIES*/
+@media(max-width: 1200px){
+	ul.menu-header li {
+		margin-left: 10px
+	}
+	ul.widget-list li:before {
+		left: 33%;
+	}
+}
+@media(max-width: 992px){
+	.soc-icons a {
+		margin-left: 10px;
+	}
+	.soc-icons a img {
+		width: 20px;
+		height: 20px;
+	}
+	ul.menu-header li a {
+		font-size: 16px;
+	}
+	ul.widget-list li:before {
+		left: 26%;
+	}
+	.row > * {
+		padding-right: 0;
+		padding-left: 0;	
+	}
+	p.copy {
+		margin-top: 30px;
+	}
+}
+@media(max-width: 576px) {
+	.logo {
+		margin-left: 50px
+	}
+	ul.menu-header {
+		flex-direction: column;
+		
+	}
+	ul.menu-header li {
+		width: 100%;
+		margin-left: 0px;
+	}
+	article {
+		padding-left: 30px;
+	}
+	ul.menu-footer {
+		margin-left: 30px;
+	}
+	p.copy {
+		margin-left: 30px;
+	}
+}
